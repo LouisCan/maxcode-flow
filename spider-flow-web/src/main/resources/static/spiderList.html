@@ -2,20 +2,20 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>SpiderFlow</title>
+	<title>MaxCode-Flow</title>
 	<link rel="stylesheet" href="js/layui/css/layui.css" />
 	<link rel="stylesheet" href="css/layui-blue.css" />
 	<script type="text/javascript" src="js/layui/layui.all.js" ></script>
 </head>
 <body style="padding:5px;">
 <div class="layui-form-item">
-	<label class="layui-form-label">爬虫名称</label>
+	<label class="layui-form-label">Flow名称</label>
 	<div class="layui-input-inline">
-		<input type="text" name="name" required  lay-verify="required" placeholder="请输入爬虫名称" autocomplete="off" class="layui-input">
+		<input type="text" name="name" required  lay-verify="required" placeholder="请输入Flow名称" autocomplete="off" class="layui-input">
 	</div>
 	<div class="layui-input-inline" style="margin-top:5px">
 		<a class="layui-btn layui-btn-sm layui-btn-normal btn-search"><i class="layui-icon">&#xe615;</i> 搜索</a>
-		<a class="layui-btn layui-btn-sm layui-btn-normal" href="editor.html"><i class="layui-icon">&#xe654;</i> 添加爬虫</a>
+		<a class="layui-btn layui-btn-sm layui-btn-normal" href="editor.html"><i class="layui-icon">&#xe654;</i> 添加Flow</a>
 	</div>
 </div>
 
@@ -42,7 +42,7 @@
 			type : 'numbers',
 			align : 'center'
 		},{
-			title : '爬虫名称',
+			title : 'Flow名称',
 			field : 'name',
 			templet : function(row){
 				return '<a class="layui-btn layui-btn-sm btn-details" data-name="'+row.name+'" data-id="'+row.id+'">'+row.name+'</a>';
@@ -123,7 +123,7 @@
 		reloadTable();
 	}).on('click','.btn-copy',function(){
 		var id = $(this).data('id');
-		layui.layer.confirm('您确定要复制此爬虫吗？',{
+		layui.layer.confirm('您确定要复制此Flow吗？',{
 			title : '复制'
 		},function(index){
 			$table.reload();
@@ -145,7 +145,7 @@
 		})
 	}).on('click','.btn-remove',function(){
 		var id = $(this).data('id');
-		layui.layer.confirm('您确定要删除此爬虫吗？',{
+		layui.layer.confirm('您确定要删除此Flow吗？',{
 			title : '删除'
 		},function(index){
 			$table.reload();
@@ -167,7 +167,7 @@
 		})
 	}).on('click','.btn-run',function(){
 		var id = $(this).data('id');
-		layui.layer.confirm('您确定要手动运行一次该爬虫吗？',{
+		layui.layer.confirm('您确定要手动运行一次该Flow吗？',{
 			title : '运行任务'
 		},function(index){
 			$table.reload();

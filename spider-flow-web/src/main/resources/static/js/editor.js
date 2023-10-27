@@ -693,7 +693,7 @@ function bindToolbarClickAction(editor){
 	}).on('click','.btn-debug',function(){
 		runSpider(true);
 	}).on('click',".btn-return",function(){
-		parent.openTab('爬虫列表','welcome','spiderList.html')
+		parent.openTab('Flow列表','welcome','spiderList.html')
 	}).on('click','.btn-save',function(){
 		Save();
 	}).on('click','.btn-dock-right',function(){

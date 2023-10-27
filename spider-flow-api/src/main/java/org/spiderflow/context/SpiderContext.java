@@ -10,7 +10,7 @@ import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
- * 爬虫上下文
+ * Flow上下文
  * @author jmxd
  *
  */
@@ -36,7 +36,7 @@ public class SpiderContext extends HashMap<String, Object>{
 	private SpiderNode rootNode;
 
 	/**
-	 * 爬虫是否运行中
+	 * Flow是否运行中
 	 */
 	private volatile boolean running = true;
 
